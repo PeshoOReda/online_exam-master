@@ -33,12 +33,13 @@ class Quiz {
   }
 }
 
-  Future<Quiz> fetchQuiz() async {
-    final response = await http.get(Uri.parse('https://exam.elevateegy.com/api/v1/exams'));
+Future<Quiz> fetchQuiz() async {
+  final response =
+      await http.get(Uri.parse('https://exam.elevateegy.com/api/v1/exams'));
 
-    if (response.statusCode == 200) {
-      return Quiz.fromJson(json.decode(response.body));
-    } else {
-      throw Exception('Failed to load quiz');
-    }
+  if (response.statusCode == 200) {
+    return Quiz.fromJson(json.decode(response.body));
+  } else {
+    throw Exception('Failed to load quiz');
   }
+}

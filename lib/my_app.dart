@@ -8,17 +8,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Online Exam',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: HomeScreen(),
-      routes: {
-        '/languages': (context) => LevelScreen(),
-        '/search_subjects': (context) => ExploreScreen(),
-      },
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Online Exam',
+        theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+            useMaterial3: true),
+        home: HomeScreen(),
+        routes: {
+          '/languages': (context) => LevelScreen(),
+          '/search_subjects': (context) => ExploreScreen()
+        });
   }
 }

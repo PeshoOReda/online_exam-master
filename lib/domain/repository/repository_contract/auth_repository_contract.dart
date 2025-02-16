@@ -1,4 +1,1 @@
-
-abstract class AuthRepositoryContract{
-
-}
+abstract class AuthRepositoryContract {}
