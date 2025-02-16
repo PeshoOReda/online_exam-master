@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 
 class CardExam extends StatelessWidget {
   const CardExam({super.key});
@@ -7,36 +7,37 @@ class CardExam extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.all(16.0),
+      margin: EdgeInsets.symmetric(vertical: 8.0),
       child: Padding(
         padding: EdgeInsets.all(16.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SvgPicture.asset(
               'assets/images/Profit.svg',
+              width: 50,
+              height: 50,
             ),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Examid.title',
+                  'High level',
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  'Questions',
+                  '20 Question',
                   style: TextStyle(fontSize: 18),
                 ),
                 Text(
-                  'fromTo',
+                  'From: 1.00 To: 6.00',
                   style: TextStyle(fontSize: 18),
                 ),
               ],
             ),
             Text(
-              'Duration',
+              '30 Minutes',
               style: TextStyle(fontSize: 18),
             ),
           ],
